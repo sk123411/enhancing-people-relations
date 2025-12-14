@@ -172,7 +172,8 @@
       <p>
         Now, you can book a private video session with Shivam to work on your mindset, emotional clarity, and relationships.
       </p>
-   <p style="font-size:14px; color:#aaa; margin-top:20px;">
+
+      <p style="font-size:14px; color:#aaa; margin-top:20px;">
   Please read our 
   <a href="privacy-policy.html" target="_blank" style="color:#f5c400; text-decoration:none;">
     Privacy Policy
@@ -184,7 +185,9 @@
     download the Privacy Policy (PDF)
   </a>
   for your reference.
-   </p>
+</p>
+
+
     </div>
 
     <div class="section">
@@ -263,28 +266,34 @@
   </div>
 
 
+<script>
 
-  <script>
 function payNow() {
+
   const telegramUser = document.getElementById("telegram").value;
   if (!telegramUser) {
     alert("Please enter your Telegram username");
     return;
   }
 
-  // Save Telegram username
   localStorage.setItem("user_telegram", telegramUser);
 
   var options = {
-     key: "Yrzp_test_3fABG4i0cTLrvu", //USING TEST MODE 
-    // key: "rzp_live_tSO5hVfmA85qiq" // PROD KEY
-    amount: 1,
+    key: "rzp_test_3fABG4i0cTLrvu", // LIVE or TEST key
+    amount: 199900, // ₹1999 = 199900 paise
     currency: "INR",
+    
     name: "Enhancing People Relations",
     description: "45-minute 1:1 Video Session with Shivam",
 
-    handler: function () {
+    handler: function (response) {
+      // SUCCESS
       window.location.href = "success.html";
+    },
+
+    prefill: {
+      name: "",
+      email: "",
     },
 
     theme: {
