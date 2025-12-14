@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Booking Confirmed | Enhancing People Relations</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f0f0f;
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+    .box {
+      background: #1a1a1a;
+      padding: 40px 30px;
+      border-radius: 14px;
+      max-width: 520px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.5);
+    }
+    h1 { color: #f5c400; }
+    p {
+      color: #cccccc;
+      line-height: 1.6;
+      font-size: 16px;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 25px;
+      background: #229ED9;
+      color: #fff;
+      padding: 14px 26px;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 16px;
+    }
+    .note {
+      margin-top: 18px;
+      font-size: 14px;
+      color: #aaaaaa;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+
+   <h1>Booking Confirmed ✅</h1>
+
+    <p>
+      Your <strong>45-minute 1:1 video session with Shivam</strong> has been successfully booked.
+    </p>
+
+    <p>
+      👉 <strong>Please share your booking confirmation with us on Telegram</strong> so we can connect with you, 
+    </p>
+
+    <p class="note">
+      After succcessfull confirmation of your message on Telegram, We will share you the timings for meeting with Shivam Kewat within <strong>24 hours</strong>. 
+    </p>
+
+
+    <a href="#" class="btn" onclick="sendTelegramMessage()">
+      Send Booking Confirmation on Telegram
+    </a>
+
+    <p class="note">
+      One good thought can change your day.<br>
+      One strong mindset habit can change your life.
+    </p>
+  </div>
+
+  <script>
+    function sendTelegramMessage() {
+      const telegramUser = localStorage.getItem("user_telegram");
+
+      const message = encodeURIComponent(
+        "✅ Booking Confirmed\n\nHi Shivam, I have booked a 45-minute 1:1 video session.\n\nMy Telegram username is: " +
+        telegramUser +
+        "\n\nPlease let me know the next steps.\n\nThank you."
+      );
+
+      // 🔹 REPLACE with YOUR Telegram username (no @)
+      const yourTelegramUsername = "shivamkewatEPS";
+
+      window.open(
+        `https://t.me/${yourTelegramUsername}?text=${message}`,
+        "_blank"
+      );
+    }
+  </script>
+</body>
+</html>
