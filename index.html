@@ -4,7 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Book a Video Session | Enhancing People Relations</title>
+
   <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -13,61 +15,8 @@
       color: #ffffff;
       line-height: 1.6;
     }
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 40px 20px;
-    }
-    h1, h2 {
-      color: #f5c400;
-    }
-    .tagline {
-      font-size: 18px;
-      margin-bottom: 30px;
-      color: #cccccc;
-    }
-    .section {
-      margin-bottom: 40px;
-    }
-    ul {
-      padding-left: 20px;
-    }
-    li {
-      margin-bottom: 8px;
-    }
-    .card {
-      background: #1a1a1a;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.4);
-    }
-    .price {
-      font-size: 28px;
-      font-weight: bold;
-      margin: 20px 0;
-    }
-    .btn {
-      display: inline-block;
-      background: #f5c400;
-      color: #000;
-      padding: 14px 28px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-      cursor: pointer;
-      border: none;
-    }
-    .btn:hover {
-      background: #ffd84d;
-    }
-    footer {
-      text-align: center;
-      margin-top: 60px;
-      font-size: 14px;
-      color: #888;
-    }
 
-        /* HERO */
+    /* HERO */
     .hero {
       background: linear-gradient(135deg, #ffffff 0%, #f3f3f3 100%);
       padding: 56px 20px 48px;
@@ -107,19 +56,14 @@
       margin: auto;
       padding: 50px 20px;
     }
-    h1, h2, h3 {
-      color: #f5c400;
-    }
-    .tagline {
-      font-size: 18px;
-      margin-bottom: 30px;
-      color: #cccccc;
-    }
-    .section {
-      margin-bottom: 42px;
-    }
+
+    h1, h2, h3 { color: #f5c400; }
+    .tagline { font-size: 18px; color: #cccccc; margin-bottom: 30px; }
+
+    .section { margin-bottom: 42px; }
     ul { padding-left: 20px; }
     li { margin-bottom: 8px; }
+
     .card {
       background: linear-gradient(180deg, #1c1c1c, #141414);
       padding: 30px;
@@ -127,143 +71,92 @@
       box-shadow: 0 30px 60px rgba(0,0,0,0.55);
       border: 1px solid #2a2a2a;
     }
-    .price { font-size: 32px; font-weight: bold; margin: 22px 0; }
+
+    .price {
+      font-size: 32px;
+      font-weight: bold;
+      margin: 22px 0;
+    }
+
     .btn {
-      display: inline-block;
       background: linear-gradient(135deg, #f5c400, #ffd84d);
       color: #000;
       padding: 15px 34px;
       border-radius: 40px;
-      text-decoration: none;
+      border: none;
       font-weight: bold;
       cursor: pointer;
-      border: none;
-      transition: transform .2s ease, box-shadow .2s ease;
     }
-    .btn:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(245,196,0,0.4); }
-    input { width: 100%; padding: 14px; border-radius: 10px; border: none; margin-bottom: 20px; font-size: 15px; }
-    footer { text-align: center; margin-top: 70px; font-size: 14px; color: #888; }
-    @media (max-width: 768px) { .hero-inner { flex-direction: column; text-align: center; } .hero h1 { font-size: 34px; } }
+
+    input {
+      width: 100%;
+      padding: 14px;
+      border-radius: 10px;
+      border: none;
+      margin-bottom: 20px;
+      font-size: 15px;
+    }
+
+    footer {
+      background:#0b0b0b;
+      border-top:1px solid #2a2a2a;
+      padding:30px 20px;
+      margin-top:80px;
+      text-align:center;
+      font-size:14px;
+      color:#aaa;
+    }
+
+    @media (max-width: 768px) {
+      .hero-inner { flex-direction: column; text-align: center; }
+      .hero h1 { font-size: 34px; }
+    }
   </style>
 </head>
+
 <body>
-  <!-- HERO -->
-  <div class="hero">
-    <div class="hero-inner">
-      <img src="life-circle.png" alt="Enhancing People Relations" class="hero-logo" />
-      <div>
-        <h1>Enhancing People Relations</h1>
-        <p class="tagline">A small talk can change everything</p>
-      </div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <img src="life-circle.png" class="hero-logo" alt="Enhancing People Relations">
+    <div>
+      <h1>Enhancing People Relations</h1>
+      <p class="tagline">A small talk can change everything</p>
     </div>
   </div>
-  </style>
-</head>
-<body>
-  <div class="container">
-
-    <h1>Book a 1:1 Video Session with Shivam</h1>
-    <p class="tagline">Enhancing People Relations<br/>A small talk can change everything</p>
-
-    <div class="section">
-      <p>
-        <strong>Enhancing People Relations</strong> is a platform dedicated to helping people grow emotionally, think better, and build stronger connections — through short, powerful video content.
-      </p>
-      <p>
-        Now, you can book a private video session with Shivam to work on your mindset, emotional clarity, and relationships.
-      </p>
-
-      <p style="font-size:14px; color:#aaa; margin-top:20px;">
-  Please read our 
-  <a href="privacy-policy.html" target="_blank" style="color:#f5c400; text-decoration:none;">
-    Privacy Policy
-  </a>
-  to fully understand and feel assured about the genuineness and quality of our services.
-  <br><br>
-  You may also 
-  <a href="privacy-policy.pdf" target="_blank" style="color:#f5c400; text-decoration:none;">
-    download the Privacy Policy (PDF)
-  </a>
-  for your reference.
-</p>
-
-
-    </div>
-
-    <div class="section">
-      <h2>What This Session Helps With</h2>
-      <ul>
-        <li>Understanding your emotions</li>
-        <li>Managing conflicts calmly</li>
-        <li>Building confidence</li>
-        <li>Improving personal & professional relationships</li>
-        <li>Reducing overthinking</li>
-        <li>Developing a strong daily mindset</li>
-      </ul>
-    </div>
-
-      <div style="
-  background:#111;
-  border:1px solid #2a2a2a;
-  border-radius:14px;
-  padding:24px;
-  margin:30px 0;
-  color:#e0e0e0;
-">
-
-  <h3 style="color:#f5c400; margin-top:0;">
-    How This Payment Process Works (Telegram Only)
-  </h3>
-
-  <p>
-    To keep the process private and simple, all communication for this session
-    will happen <strong>only on Telegram</strong>.
-  </p>
-
-  <ul style="line-height:1.8; padding-left:18px;">
-    <li><strong>You must have an Telegram account</strong></li>
-    <li>You enter your <strong>Telegram username</strong> while booking</li>
-    <li>After payment, you’ll be asked to send a booking confirmation on Telegram</li>
-    <li>Your phone number stays <strong>completely private</strong></li>
-    <li>We connect with you on Telegram within <strong>24 hours</strong></li>
-    <li>Session details & timing are shared there</li>
-  </ul>
-
-  <p style="margin-top:15px;">
-    💬 <strong>Why Telegram?</strong><br>
-    It helps us keep communication secure, distraction-free, and respectful of privacy.
-  </p>
 </div>
 
-    
+<div class="container">
 
-    <div class="section card">
-      <h2>1:1 Video Session Details</h2>
-      <ul>
-        <li>Duration: 45 minutes</li>
-        <li>Mode: Google Meet / Zoom</li>
-        <li>Personal, confidential & focused</li>
-      </ul>
-      <div class="price">₹1999</div>      
-      <label>Telegram Username</label>
-      <input type="text" id="telegram" placeholder="@username (without spaces)" style="width:100%;padding:12px;border-radius:8px;border:none;margin-bottom:20px;" />
-     
-      <button class="btn" onclick="payNow()">Book & Pay Now</button>
-    </div>
+  <h1>Book a 1:1 Video Session with Shivam</h1>
 
-    <div class="section">
-      <h2>Why Book This Session?</h2>
-      <p>
-        Because one good thought can change your day.<br/>
-        One strong mindset habit can change your life.
-      </p>
-    </div>
-
+  <div class="section">
+    <p>
+      Enhancing People Relations helps you grow emotionally, think clearly,
+      and build stronger relationships through meaningful conversations.
+    </p>
   </div>
 
+  <div class="section card">
+    <h2>Session Details</h2>
+    <ul>
+      <li>Duration: 45 minutes</li>
+      <li>Mode: Google Meet / Zoom</li>
+      <li>Private & confidential</li>
+    </ul>
+
+    <div class="price">₹1999</div>
+
+    <label>Telegram Username</label>
+    <input type="text" id="telegram" placeholder="@username">
+
+    <button class="btn" onclick="payNow()">Book & Pay Now</button>
+  </div>
+
+</div>
 
 <script>
-
 function payNow() {
 
   const telegramUser = document.getElementById("telegram").value;
@@ -272,69 +165,37 @@ function payNow() {
     return;
   }
 
-  localStorage.setItem("user_telegram", telegramUser);
-
   var options = {
-    key: "rzp_test_3fABG4i0cTLrvu", // LIVE or TEST key
-    amount: 199900, // ₹1999 = 199900 paise
+    key: "rzp_test_3fABG4i0cTLrvu",
+    amount: 199900,
     currency: "INR",
-    
     name: "Enhancing People Relations",
-    description: "45-minute 1:1 Video Session with Shivam",
+    description: "45-minute 1:1 Video Session",
 
     handler: function (response) {
-      // SUCCESS
+      // 🟡 SOFT PROTECTION
+      sessionStorage.setItem("payment_success", "yes");
+      sessionStorage.setItem("payment_id", response.razorpay_payment_id);
       window.location.href = "success.html";
     },
 
-    prefill: {
-      name: "",
-      email: "",
-    },
-
-    theme: {
-      color: "#f5c400"
-    }
+    theme: { color: "#f5c400" }
   };
 
-  var rzp = new Razorpay(options);
-  rzp.open();
+  new Razorpay(options).open();
 }
 </script>
 
-  <footer style="
-  background:#0b0b0b;
-  border-top:1px solid #2a2a2a;
-  padding:30px 20px;
-  margin-top:80px;
-  text-align:center;
-  font-size:14px;
-  color:#aaa;
-">
-
-  <p style="margin-bottom:12px;">
-    © 2025 <strong style="color:#fff;">Enhancing People Relations</strong><br>
-    <span style="font-size:13px;">A small talk can change everything</span>
+<footer>
+  <p>© 2025 <strong>Enhancing People Relations</strong></p>
+  <p>
+    <a href="privacy-policy.html">Privacy Policy</a> |
+    <a href="terms-and-conditions.html">Terms & Conditions</a> |
+    <a href="cancellation-and-refunds.html">Cancellation & Refunds</a> |
+    <a href="shipping-policy.html">Shipping Policy</a> |
+    <a href="contact-us.html">Contact Us</a>
   </p>
-
-  <p style="margin-bottom:14px;">
-    <a href="privacy-policy.html" target="_blank" style="color:#f5c400; text-decoration:none;">Privacy Policy</a> |
-    <a href="terms-and-conditions.html" target="_blank" style="color:#f5c400; text-decoration:none;">Terms & Conditions</a> |
-    <a href="cancellation-and-refunds.html" target="_blank" style="color:#f5c400; text-decoration:none;">Cancellation & Refunds</a> |
-    <a href="shipping-policy.html" target="_blank" style="color:#f5c400; text-decoration:none;">Shipping Policy</a> |
-    <a href="contact-us.html" target="_blank" style="color:#f5c400; text-decoration:none;">Contact Us</a>
-  </p>
-
-  <p style="font-size:12px; color:#777; max-width:700px; margin:auto;">
-    All services offered are digital consulting sessions. No physical products are sold or shipped.
-    Communication is conducted via Telegram only.
-  </p>
-
 </footer>
 
-
 </body>
-</html>
-
-
 </html>
