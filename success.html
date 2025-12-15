@@ -4,7 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Booking Confirmed | Enhancing People Relations</title>
-
+  <!-- 🔐 SOFT PROTECTION -->
+  <script>
+    if (sessionStorage.getItem("payment_success") !== "yes") {
+      window.location.href = "index.html";
+    }
+  </script>
+  
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -78,6 +84,7 @@
   </div>
 
   <script>
+    
     function sendTelegramMessage() {
       const telegramUser = localStorage.getItem("user_telegram");
 
@@ -95,6 +102,12 @@
         "_blank"
       );
     }
+
+    // 🧹 Clean up soft-protection flag after page load
+  setTimeout(() => {
+    sessionStorage.removeItem("payment_success");
+  }, 5000);
+    
   </script>
 </body>
 </html>
