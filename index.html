@@ -12,6 +12,18 @@
       background: #0f0f0f;
       color: #ffffff;
       line-height: 1.6;
+
+ background:
+    linear-gradient(rgba(15,15,15,0.88), rgba(15,15,15,0.88)),
+    url("background.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+
+      
     }
     .container {
       max-width: 900px;
@@ -67,6 +79,22 @@
       color: #888;
     }
 
+    /* TITLE WITH PHOTO */
+.title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+.profile-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #f5c400;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.6);
+}
+    
         /* HERO */
     .hero {
       background: linear-gradient(135deg, #ffffff 0%, #f3f3f3 100%);
@@ -161,9 +189,21 @@
 </head>
 <body>
   <div class="container">
-
+<!-- 
     <h1>Book a 1:1 Video Session with Shivam</h1>
+    <p class="tagline">Enhancing People Relations<br/>A small talk can change everything</p> -->
+
+
+<!-- TITLE + PHOTO -->
+  <div class="title-row">
+    <div>
+      <h1>Book a 1:1 Video Session with Shivam</h1>
     <p class="tagline">Enhancing People Relations<br/>A small talk can change everything</p>
+    </div>
+    <img src="cropped_circle_image.png" class="profile-photo" alt="Shivam">
+  </div>
+
+    
 
     <div class="section">
       <p>
